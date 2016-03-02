@@ -33,5 +33,12 @@ require_once(dirname(__FILE__) . '/../../config.php');
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class block_mystream extends block_base {
+    /**
+     * Sets the block title.
+     *
+     * @return none
+     */
+    public function init() {
+    }
 
 }
