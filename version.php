@@ -25,3 +25,6 @@
 
 $plugin->version = 2016030100;
 $plugin->component = 'block_mystream';
+$plugin->requires = 2015111600;
+$plugin->maturity = 'MATURITY_ALPHA';
+$plugin->release = 'POET Alpha 0';

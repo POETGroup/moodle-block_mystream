@@ -24,6 +24,6 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['pluginname'] = '';
-$string['mystream:addinstance'] = '';
-$string['mystream:myaddinstance'] = '';
+$string['pluginname'] = 'Mystream';
+$string['mystream:addinstance'] = 'Add a Mystream block to a course';
+$string['mystream:myaddinstance'] = 'Add my event stream to my dashboard';
