@@ -39,6 +39,7 @@ class block_mystream extends block_base {
      * @return none
      */
     public function init() {
+        $this->title = get_string('pluginname', 'block_mystream');
     }
 
 }
