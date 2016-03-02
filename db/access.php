@@ -24,4 +24,23 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$capabilities = array();
+$capabilities = array(
+        'block/mystream:addinstance' => array(
+                'captype' => 'read',
+                'contextlevel' => CONTEXT_BLOCK,
+                'archetypes' => array(
+                    'editingteacher' => CAP_ALLOW,
+                    'manager' => CAP_ALLOW
+                ),
+                'clonepermissionsfrom' => 'moodle/site:manageblocks'
+        ),
+        'block/mystream:myaddinstance' => array(
+                'riskbitmask' => RISK_PERSONAL,
+                'captype' => 'read',
+                'contextlevel' => CONTEXT_SYSTEM,
+                'archetypes' => array(
+                        'user' => CAP_ALLOW,
+                ),
+                'clonepermissionsfrom' => 'moodle/my:manageblocks'
+        ),
+    );
