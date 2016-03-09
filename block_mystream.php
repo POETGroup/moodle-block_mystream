@@ -55,11 +55,11 @@ class block_mystream extends block_base {
         }
         $this->content = new stdClass;
 
-        $output = $this->page->get_renderer('block_mystream'); // Global $PAGE is preloaded into $this->page.
+        $renderer = $this->page->get_renderer('block_mystream'); // Global $PAGE is preloaded into $this->page.
+        $block = new \block_mystream\output\block('Loading data...');
 
-        $text = new \block_mystream\stream_data('calendar', '', 'Loading data...');
-
-        $this->content->text = $text->content;
+//        $text = new \block_mystream\stream_data('calendar', '', 'Loading data...');
+        $this->content->text = $renderer->render_block($block);
         return $this->content;
     }
 

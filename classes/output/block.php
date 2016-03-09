@@ -37,15 +37,24 @@ defined('MOODLE_INTERNAL') || die();
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-class renderer extends \plugin_renderer_base {
+class block implements \renderable, \templatable {
+
     /**
-     * Render a My Stream block
+     * Constructor
      *
-     * @param \templatable $block
-     * @return string|boolean
+     * param string $stream A simple string to output.
      */
-    public function render_block(\templatable $block) {
-        $data = $block->export_for_template($this);
-        return $this->render_from_template('block_mystream/block', $data);
+    public function __construct($stream = null) {
+        $this->stream = $stream;
+    }
+
+    /**
+     * Prepare data for template.
+     *
+     * @param \renderer_base $output
+     * @return array
+     */
+    public function export_for_template(\renderer_base $output) {
+        return array('stream' => $this->stream);
     }
 }
